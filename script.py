@@ -1,10 +1,11 @@
 from mcpi_e.minecraft import Minecraft
 
-serverAddress="147.135.48.77"
-pythonApiPort=25565
+ip_address = '127.0.0.1'
+port = 4711
+username = "YOUR_AWESOME_USERNAME"
+mc = Minecraft.create('127.0.0.1', 4711, username)
 
-mc = Minecraft.create(serverAddress, pythonApiPort)
-
-pos = mc.player.getPos()
+# print the player's position
+pos = mc.player.getTilePos()
 
 print("pos: x:{},y:{},z:{}".format(pos.x,pos.y,pos.z))
